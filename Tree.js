@@ -52,6 +52,24 @@ class TreeNode{
         }
         return null;
     }
+
+    min(){
+        if (this.left === null){
+            return this.value;
+        }
+        else {
+            return this.left.min();
+        }
+    }
+
+    max(){
+        if (this.right == null){
+            return this.value;
+        }
+        else {
+            return this.right.max();
+        }
+    }
 }
 
 class Tree {
@@ -79,6 +97,24 @@ class Tree {
         }
         return null;
     }
+
+    min(){
+        if (this.root == null){
+            return -Infinity;
+        }
+        else {
+            return this.root.min();
+        }
+    }
+
+    max(){
+        if (this.root == null){
+            return Infinity;
+        }
+        else {
+            return this.root.max();
+        }
+    }
 }
 
 tree = new Tree();
@@ -93,6 +129,7 @@ tree.insert(22);
 tree.insert(32);
 
 console.log(tree.get(27));
+console.log(tree.max());
 
 
 
