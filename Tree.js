@@ -117,9 +117,15 @@ class Tree {
     }
 
     delete(val){
-        var root = delete(this.root, val);
+        var root = _delete(this.root, val);
     }
-    
+
+    _delete(subTreeRoot, val){
+        if (subTreeRoot == null){
+            return subTreeRoot;
+        }
+    }
+
 }
 
 tree = new Tree();
