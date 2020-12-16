@@ -124,22 +124,20 @@ var binarySearchTreeMethods =  {
 
     isEmpty: function() {
         return this.root === null;
-    },
-
-    inOrder: function (node) {
-        if (!(node === null)) {
-            inOrder(node.left);
-            console.log(node.data + " ");
-            inOrder(node.right);
-        }
-        
     }
 
     
 };
 
+function inOrder(node){
+    if (!(node == null)) {
+        inOrder(node.left);
+        console.log(node.data + " ");
+        inOrder(node.right);
+    }
+}
 
-tree = new BinarySearchTree();
+tree = new binarySearchTree();
 tree.insert(25);
 tree.insert(20);
 tree.insert(30);
@@ -151,5 +149,5 @@ tree.insert(35);
 
 tree.remove(30);
 
-console.log("Inoder: ");
-console.log(tree.inOrder(tree.root));
+console.log("Inorder: ");
+console.log(inOrder(tree.root));
