@@ -115,6 +115,11 @@ class Tree {
             return this.root.max();
         }
     }
+
+    delete(val){
+        var root = delete(this.root, val);
+    }
+    
 }
 
 tree = new Tree();
