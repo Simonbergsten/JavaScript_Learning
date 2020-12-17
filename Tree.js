@@ -140,6 +140,7 @@ tree.insert(22);
 tree.insert(32);
 
 console.log(tree.get(27));
+console.log(tree.traverseInOrder());
 console.log(tree.max());
 
 
